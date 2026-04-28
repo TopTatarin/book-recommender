@@ -67,5 +67,5 @@ book-recommender/
 ## Notes
 
 - The original course version used OpenAI embeddings + Gradio. This fork swaps both: embeddings now run **locally** via Hugging Face (no API key, no cost), and the UI is a native desktop window via `tkinter`.
-- All inference runs on CPU by default. To use GPU, change `device=-1` to `device=0` in the classification notebooks.
+- All inference runs on CUDA by default. To use MPS, change `device="cuda"` to `device="mps"` in the classification notebooks.
 - A `cover-not-found.jpg` fallback is shown when a book has no thumbnail URL.
